@@ -1,0 +1,53 @@
+header{
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    background-color: lightseagreen;
+    width: 100%;
+    margin: auto;
+}
+
+#container{
+    height: 200px;
+    width: 50%;
+    background-color: lightcoral;
+    position: relative;
+    top: 300px;
+    margin: auto;
+    padding: 10px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    background-color: lightseagreen;
+    width: 100%;
+    margin: auto;
+}
+
+#heart{
+    color: red;
+    animation-name: hearticon;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hearticon {
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 50%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    75%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
