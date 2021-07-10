@@ -1,4 +1,13 @@
-header{
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
     position: absolute;
     top: 0px;
     text-align: center;
@@ -7,17 +16,54 @@ header{
     margin: auto;
 }
 
-#container{
-    height: 200px;
+.container {
+    /* height: 200px;
     width: 50%;
-    background-color: lightcoral;
+    background-color: rgb(231, 122, 122);
     position: relative;
     top: 300px;
     margin: auto;
-    padding: 10px;
+    padding: 10px; */
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
 }
 
-footer{
+.high {
+    height: 200px;
+    background-color: red;
+    text-align: center;
+    color: #eee;
+    border: 2px solid #FFF;
+    position: relative;
+}
+
+.mid {
+    height: 200px;
+    background-color: #FD7D00;
+    text-align: center;
+    color: #eee;
+    border: 2px solid #FFF;
+    position: relative;
+}
+
+.low {
+    height: 200px;
+    background-color: green;
+    text-align: center;
+    color: #eee;
+    border: 2px solid #FFF;
+    position: relative;
+}
+
+.h2{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer {
     position: absolute;
     bottom: 0px;
     text-align: center;
@@ -26,7 +72,7 @@ footer{
     margin: auto;
 }
 
-#heart{
+#heart {
     color: red;
     animation-name: hearticon;
     animation-iteration-count: infinite;
@@ -35,19 +81,19 @@ footer{
 }
 
 @keyframes hearticon {
-    0%{
+    0% {
         opacity: 100%;
     }
-    25%{
+    25% {
         opacity: 50%;
     }
-    50%{
+    50% {
         opacity: 0%;
     }
-    75%{
+    75% {
         opacity: 50%;
     }
-    100%{
+    100% {
         opacity: 100%;
     }
 }
