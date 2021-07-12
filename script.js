@@ -1,3 +1,4 @@
+
 // Popup for new task
 function togglePopup() {
     document.getElementById("popup-container").classList.toggle("active")
@@ -14,3 +15,4 @@ form.addEventListener("submit", (e) => {
     const priorityValue=document.getElementById("priority");
     console.log(priorityValue.selectedIndex); //high=0; mid=1; low=2;
 });
+
