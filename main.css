@@ -9,17 +9,20 @@ body {
     align-items: center;
     margin: 0;
     min-height: 100vh;
+    font-family: "Londrina Solid";
+    font-weight: 300;
+    background-color: rgb(245, 242, 204);
 }
 
 .add-btn {
     width: 80px;
     height: 80px;
     background-color: lightseagreen;
-    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    border-color: rgb(253, 238, 25);
     font-size: 40px;
     cursor: pointer;
     position: fixed;
@@ -28,6 +31,7 @@ body {
     transition: background 0.25s;
     outline: none;
     border: none;
+    
 }
 
 .add-btn:active {
@@ -62,6 +66,10 @@ body {
     border-radius: 8px;
 }
 
+.popup-title{
+    color: black;
+}
+
 .create-task .form .input {
     background-color: #EEEEEE;
     border: none;
@@ -73,6 +81,7 @@ body {
     font-size: 1.3rem;
     width: 100%;
     padding: 1.5rem;
+    font-family: "Londrina Solid";
 }
 
 .priority-dropdown {
@@ -85,6 +94,7 @@ body {
     font-size: 1rem;
     width: 100%;
     padding: 1.2rem;
+    font-family: "Londrina Solid";
 }
 
 .create-task h4{
@@ -97,7 +107,7 @@ body {
 }
 
 .save-task {
-    background-color: #2ecc71;
+    background-color: lightseagreen;
     border: none;
     color: white;
     display: block;
@@ -106,10 +116,11 @@ body {
     font-size: 1.3rem;
     width: 100%;
     padding: 1.5rem;
+    font-family: "Londrina Solid";
 }
 
 .save-task:active {
-    background-color: #1a994f;
+    background-color: rgb(2, 138, 131);
 }
 
 .popup-container .close-btn {
@@ -126,6 +137,9 @@ body {
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 25px;
 }
 
 .popup-container .close-btn:active {
@@ -141,16 +155,6 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-header {
-    position: absolute;
-    top: 0px;
-    text-align: center;
-    background-color: lightseagreen;
-    color: #FFF;
-    width: 100%;
-    margin: auto;
-}
-
 .container {
     width: 90%;
     display: grid;
@@ -158,32 +162,35 @@ header {
     grid-gap: 20px;
 }
 
+/* priority boxes */
+
 .high {
-    height: fit-content;
-    background-color: red;
-    text-align: center;
-    color: #eee;
-    border-radius: 10px;
-    position: relative;
+    background-color: rgb(255, 56, 56);
+    border-color:  rgb(250, 21, 21);
 }
 
 .mid {
-    height: fit-content;
-    background-color: #FD7D00;
-    text-align: center;
-    color: #eee;
-    border-radius: 10px;
-    position: relative;
+    background-color: #fd9b38;
+    border-color: #ff952b;
 }
 
 .low {
-    height: fit-content;
-    background-color: green;
-    text-align: center;
-    color: #eee;
-    border-radius: 10px;
-    position: relative;
+    background-color: rgb(61, 199, 61);
+    border-color: rgb(43, 184, 43);
 }
+
+.common-box{
+    border-radius: 10px;
+    height: fit-content;
+    text-align: center;
+    color: rgb(250, 248, 228);
+    position: relative;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+/* priority boxes */
 
 .h2 {
     display: flex;
@@ -191,14 +198,40 @@ header {
     justify-content: center;
 }
 
+/* common color */
+.common-color{
+    color: rgb(247, 241, 162);
+}
+/* common color */
+
+/* header footer starts here*/
+
+header {
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    background-color: lightseagreen;
+    width: 100%;
+    margin: auto;
+}
+
+#title{
+    font-family: "Sarina";
+    font-size: 50px;
+}
+
+#subtitle{
+    font-size: 30px;
+}
+
 footer {
     position: absolute;
     bottom: 0px;
     text-align: center;
     background-color: lightseagreen;
-    color: #FFF;
     width: 100%;
     margin: auto;
+    font-size: 20px;
 }
 
 .heart {
@@ -207,6 +240,7 @@ footer {
     animation-iteration-count: infinite;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    font-size: 30px;
 }
 
 @keyframes hearticon {
@@ -226,3 +260,5 @@ footer {
         opacity: 100%;
     }
 }
+
+/* header footer ends here*/
