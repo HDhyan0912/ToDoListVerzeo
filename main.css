@@ -17,7 +17,7 @@ body {
 .add-btn {
     width: 80px;
     height: 80px;
-    background-color: lightseagreen;
+    background-color: rgb(5, 160, 152);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -248,7 +248,7 @@ footer {
 }
 
 .heart {
-    color: red;
+    color: rgb(250, 39, 39);
     animation-name: hearticon;
     animation-iteration-count: infinite;
     animation-duration: 2s;
