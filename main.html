@@ -14,19 +14,10 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sarina&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
     <!-- fonts -->
 
     <!-- title icon -->
@@ -41,7 +32,7 @@
     <title>My Note | Create To-Dos</title>
 </head>
 
-<body class = "common-color">
+<body class="common-color">
     <header>
         <h1 id="title">My Note</h1>
         <h2 id="subtitle">Verzeo Web Development Project</h2>
@@ -52,7 +43,7 @@
         <div class="popup"></div>
         <div class="create-task" id="create-task">
             <div class="close-btn" onclick="togglePopup()">&times;</div>
-            <h2 class = "popup-title">Create New Task</h2>
+            <h2 class="popup-title">Create New Task</h2>
             <form class="form" id="form">
                 <input type="text" id="input" class="input" placeholder="Enter Task" autocomplete="off" required />
                 <h4 class="priority-text">Select Task Priority</h4>
@@ -60,7 +51,7 @@
                     <option value=”high”>High</option>
                     <option value=”mid”>Medium</option>
                     <option value=”low”>Low</option>
-                </select><br />
+                </select><br>
                 <input type="submit" value="Save Task" class="save-task" onclick="togglePopup()" />
             </form>
         </div>
