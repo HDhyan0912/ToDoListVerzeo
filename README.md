@@ -18,5 +18,5 @@
 - Below This Task Display Section Should Have Three Buttons Namely High, Medium And Low And When We Click On Any Of The Button That Priority Task Is To Be Displayed.
 
 
-Created as a major project for my internship under Verzeo.
+Created as a major project for internship under Verzeo.
 Go to https://htmlpreview.github.io/?https://github.com/HDhyan0912/ToDoListVerzeo/blob/main/main.html to preview the website.
