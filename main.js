@@ -15,4 +15,11 @@ form.addEventListener("submit", (e) => {
     const priorityValue=document.getElementById("priority");
     console.log(priorityValue.selectedIndex); //high=0; mid=1; low=2;
 });
+//Popup for new task ends here
 
+
+//Popup for tasks
+
+//insert code here
+
+// Popup for tasks ends
