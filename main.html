@@ -17,27 +17,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarina&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
     <!-- fonts -->
 
     <!-- title icon -->
-    <link rel="shortcut icon" href="pencil.png"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="pencil.png" type="image/x-icon">
     <!-- title icon -->
 
     <!-- js -->
     <script src="main.js" defer></script>
     <!-- js -->
 
-    <title>My Note | Create To-Dos</title>
+    <title>To-Dos</title>
 </head>
 
 <body class="common-color">
     <header>
-        <h1 id="title">My Note</h1>
+        <h1 id="title">To-Do List</h1>
+        <h1 id="title-shadow">To-Do List</h1>
         <h2 id="subtitle">Verzeo Web Development Project</h2>
     </header>
+
     <button class="material-icons add-btn common-color" id="add-btn" onclick="togglePopup()">add</button>
+    <button class="material-icons list-btn common-color" id="list-btn" onclick="togglePopup1()">list</button>
+
+
+
+    <!-- create-task div -->
 
     <div class="popup-container" id="popup-container">
         <div class="popup"></div>
@@ -48,15 +55,24 @@
                 <input type="text" id="input" class="input" placeholder="Enter Task" autocomplete="off" required />
                 <h4 class="priority-text">Select Task Priority</h4>
                 <select class="priority-dropdown" id="priority">
-                    <option value=”high”>High</option>
-                    <option value=”mid”>Medium</option>
-                    <option value=”low”>Low</option>
+                    <option value="high">High</option>
+                    <option value="mid">Medium</option>
+                    <option value="low">Low</option>
                 </select><br>
                 <input type="submit" value="Save Task" class="save-task" onclick="togglePopup()" />
             </form>
         </div>
     </div>
-    <div class="container">
+
+    <!-- create-task div ends -->
+
+
+    <!-- view-task div -->
+
+    <!-- do uncomment the below lines and see the output -->
+
+    <!-- <div class="view-tasks" >
+        <h2 style="color: black; font-size: 35px; position: relative;">My Tasks</h2>
         <div class="high common-box">
             <h2>HIGH</h2>
         </div>
@@ -66,7 +82,20 @@
         <div class="low common-box">
             <h2>LOW</h2>
         </div>
+    </div> -->
+
+
+    <!-- view-task div ends -->
+
+    <!-- random-quotes div -->
+
+    <div class="random-quotes">
+        <h1 id="quote">"Make Notes, Not War"</h1>
+        <h2 id="author">Sun Tzu, Art of War</h2>
     </div>
+
+    <!-- random-quotes div ends -->
+
     <footer>
         <h2>Made with <heart class="heart">♥</heart>
         </h2>
