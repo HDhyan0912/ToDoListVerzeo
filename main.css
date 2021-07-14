@@ -14,10 +14,19 @@ body {
     background-color: rgb(245, 242, 204);
 }
 
+.random-quotes{
+    color: black;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+}
+
+/* two buttons start here*/
+
 .add-btn {
     width: 80px;
     height: 80px;
-    background-color: rgb(5, 160, 152);
+    background-color: lightseagreen;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,8 +35,8 @@ body {
     font-size: 40px;
     cursor: pointer;
     position: fixed;
-    right: 30px;
-    bottom: 100px;
+    left: 628px;
+    bottom: 120px;
     transition: background 0.25s;
     outline: none;
     border: none;
@@ -36,6 +45,49 @@ body {
 .add-btn:active {
     background-color: rgb(13, 116, 110);
 }
+
+.add-btn:hover{
+    width: 85px;
+    height: 85px;
+    left: 626px;
+    bottom: 117px;
+}
+
+.list-btn {
+    width: 80px;
+    height: 80px;
+    background-color: lightseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border-color: rgb(253, 238, 25);
+    font-size: 40px;
+    cursor: pointer;
+    position: fixed;
+    right: 628px;
+    bottom: 120px;
+    transition: background 0.25s;
+    outline: none;
+    border: none;
+}
+
+.list-btn:active {
+    background-color: rgb(13, 116, 110);
+}
+
+.list-btn:hover{
+    width: 85px;
+    height: 85px;
+    right: 626px;
+    bottom: 117px;
+}
+
+/* two buttons end here */
+
+
+
+/* task creator pop up begins */
 
 .popup-container .popup {
     position: fixed;
@@ -154,6 +206,18 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
+/* task creator popup ends here */
+
+
+
+/* my tasks popup begins here */
+
+
+
+
+/* my tasks popup ends here */
+
+
 .container {
     width: 90%;
     display: grid;
@@ -184,26 +248,18 @@ body {
     text-align: center;
     color: rgb(250, 248, 228);
     position: relative;
-    font-size: 20px;
+    font-size: 15px;
     border-style: solid;
     border-width: 5px;
     animation-name: fade-animation;
     animation-duration: 2s;
 }
 
-@keyframes fade-animation {
-    0%{
-        opacity: 50%;
-    }
-    50%{
-        opacity: 75%;
-    }
-    100%{
-        opacity: 100%;
-    }
+.common-box:hover{
+        opacity: 80%;
 }
 
-/* priority boxes */
+/* priority boxes end/
 
 .h2 {
     display: flex;
@@ -226,19 +282,30 @@ header {
     background-color: lightseagreen;
     width: 100%;
     margin: auto;
+    height: 250px;
 }
 
 #title{
-    font-family: "Sarina";
+    color:black;
+    font-family: "Righteous";
     font-size: 70px;
+}
+
+#title-shadow{
+    font-family: "Righteous";
+    font-size: 70px;
+    position: relative;
+    top: -140px; 
 }
 
 #subtitle{
     font-size: 30px;
+    position: relative;
+    top: -150px;
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     text-align: center;
     background-color: lightseagreen;
@@ -248,11 +315,11 @@ footer {
 }
 
 .heart {
-    color: rgb(250, 39, 39);
+    color: red;
     animation-name: hearticon;
     animation-iteration-count: infinite;
     animation-duration: 2s;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 @keyframes hearticon {
