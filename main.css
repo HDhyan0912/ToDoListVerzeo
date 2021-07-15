@@ -35,7 +35,7 @@ body {
     font-size: 40px;
     cursor: pointer;
     position: fixed;
-    left: 28px;
+    left: 18px;
     bottom: 120px;
     transition: background 0.25s;
     outline: none;
@@ -49,7 +49,7 @@ body {
 .add-btn:hover{
     width: 85px;
     height: 85px;
-    left: 26px;
+    left: 16px;
     bottom: 117px;
 }
 
@@ -65,7 +65,7 @@ body {
     font-size: 40px;
     cursor: pointer;
     position: fixed;
-    right: 28px;
+    right: 18px;
     bottom: 120px;
     transition: background 0.25s;
     outline: none;
@@ -79,7 +79,7 @@ body {
 .list-btn:hover{
     width: 85px;
     height: 85px;
-    right: 26px;
+    right: 16px;
     bottom: 117px;
 }
 
