@@ -3,7 +3,6 @@
 }
 
 body {
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,19 +13,21 @@ body {
     background-color: rgb(245, 242, 204);
 }
 
-.random-quotes{
-    color: black;
-    margin: auto;
-    text-align: center;
-    position: fixed;
-}
-
 /* two buttons start here*/
+
+.buttons {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 110px;
+}
 
 .add-btn {
     width: 80px;
     height: 80px;
     background-color: lightseagreen;
+    color: rgb(247, 241, 162);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,9 +35,6 @@ body {
     border-color: rgb(253, 238, 25);
     font-size: 40px;
     cursor: pointer;
-    position: fixed;
-    left: 18px;
-    bottom: 120px;
     transition: background 0.25s;
     outline: none;
     border: none;
@@ -46,27 +44,18 @@ body {
     background-color: rgb(13, 116, 110);
 }
 
-.add-btn:hover{
-    width: 85px;
-    height: 85px;
-    left: 16px;
-    bottom: 117px;
-}
-
 .list-btn {
     width: 80px;
     height: 80px;
     background-color: lightseagreen;
+    color: rgb(247, 241, 162);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border-color: rgb(253, 238, 25);
+    border: 5px solid rgb(253, 238, 25);
     font-size: 40px;
     cursor: pointer;
-    position: fixed;
-    right: 18px;
-    bottom: 120px;
     transition: background 0.25s;
     outline: none;
     border: none;
@@ -75,17 +64,6 @@ body {
 .list-btn:active {
     background-color: rgb(13, 116, 110);
 }
-
-.list-btn:hover{
-    width: 85px;
-    height: 85px;
-    right: 16px;
-    bottom: 117px;
-}
-
-/* two buttons end here */
-
-
 
 /* task creator pop up begins */
 
@@ -106,7 +84,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background-color: #FFFFFF;
+    background-color: lightseagreen;
     width: 400px;
     height: fit-content;
     z-index: 2;
@@ -115,10 +93,7 @@ body {
     padding: 1rem;
     max-width: 100%;
     border-radius: 8px;
-}
-
-.popup-title{
-    color: black;
+    color: rgb(247, 241, 162);
 }
 
 .create-task .form .input {
@@ -148,8 +123,7 @@ body {
     font-family: "Quicksand";
 }
 
-.create-task h4{
-    color: #222222;
+.create-task h4 {
     display: block;
     font-size: 1.2rem;
     width: 100%;
@@ -158,20 +132,21 @@ body {
 }
 
 .save-task {
-    background-color: lightseagreen;
+    background-color: rgb(247, 241, 162);
     border: none;
-    color: white;
+    color: lightseagreen;
     display: block;
     cursor: pointer;
     border-radius: 8px;
     font-size: 1.3rem;
+    font-weight: bold;
     width: 100%;
     padding: 1.5rem;
     font-family: "Quicksand";
 }
 
 .save-task:active {
-    background-color: rgb(2, 138, 131);
+    background-color: rgb(255, 248, 152);
 }
 
 .popup-container .close-btn {
@@ -180,16 +155,14 @@ body {
     top: 20px;
     width: 30px;
     height: 30px;
-    background-color: #BBBBBB;
-    color: #FFFFFF;
-    font-size: 15px;
+    background-color: rgb(247, 241, 162);
+    color: lightseagreen;
     font-weight: 600;
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
-    color: white;
     font-size: 25px;
 }
 
@@ -206,72 +179,179 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* task creator popup ends here */
+/* task view container */
 
+.task-container .task {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
 
+.tasks-list {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: lightseagreen;
+    width: 1190px;
+    height: fit-content;
+    z-index: 2;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+    border-radius: 8px;
+    color: rgb(247, 241, 162);
+}
 
-/* my tasks popup begins here */
+.task-container.active .task {
+    display: block;
+}
 
+.task-container.active .tasks-list {
+    transition: all 100ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
 
-
-
-/* my tasks popup ends here */
-
-
-.container {
+.view-tasks {
     width: 90%;
     display: grid;
+    margin-left: 50px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
 }
 
-/* priority boxes */
-
 .high {
+    height: fit-content;
+    text-align: center;
+    color: #EEEEEE;
+    border-radius: 10px;
+    position: relative;
     background-color: rgb(255, 56, 56);
-    border-color:  rgb(250, 21, 21);
 }
 
 .mid {
+    height: fit-content;
+    text-align: center;
+    color: #EEEEEE;
+    border-radius: 10px;
+    position: relative;
     background-color: #fd9b38;
-    border-color: #ff952b;
 }
 
 .low {
-    background-color: rgb(61, 199, 61);
-    border-color: rgb(43, 184, 43);
-}
-
-.common-box{
-    border-radius: 10px;
     height: fit-content;
     text-align: center;
-    color: rgb(250, 248, 228);
+    color: #EEEEEE;
+    border-radius: 10px;
     position: relative;
-    font-size: 15px;
-    border-style: solid;
-    border-width: 5px;
-    animation-name: fade-animation;
-    animation-duration: 2s;
+    background-color: rgb(61, 199, 61);
 }
 
-.common-box:hover{
-        opacity: 80%;
+.task-container .task-close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(247, 241, 162);
+    color: lightseagreen;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
 }
 
-/* priority boxes end/
+/* Complete task toggle */
 
-.h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.tasks-high {
+    background-color: rgb(255, 56, 56);
+    padding: 1rem;
+    border-radius: 8px;
+    padding-top: 0;
+    margin: 0;
+    list-style-type: none;
+    color: #111;
 }
 
-/* common color */
-.common-color{
-    color: rgb(247, 241, 162);
+.tasks-mid {
+    background-color: #fd9b38;
+    padding: 1rem;
+    border-radius: 8px;
+    padding-top: 0;
+    margin: 0;
+    list-style-type: none;
+    color: #111;
 }
-/* common color */
+
+.tasks-low {
+    background-color: rgb(61, 199, 61);
+    padding: 1rem;
+    border-radius: 8px;
+    padding-top: 0;
+    margin: 0;
+    list-style-type: none;
+    color: #111;
+}
+
+.tasks-high li {
+    background-color: white;
+    border-radius: 8px;
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    margin: 8px;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+.tasks-high li.completed {
+    color: #b5b5b5;
+    text-decoration: line-through;
+}
+
+.tasks-mid li {
+    background-color: white;
+    border-radius: 8px;
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    margin: 8px;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+.tasks-mid li.completed {
+    color: #b5b5b5;
+    text-decoration: line-through;
+}
+
+.tasks-low li {
+    background-color: white;
+    border-radius: 8px;
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    margin: 8px;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+.tasks-low li.completed {
+    color: #b5b5b5;
+    text-decoration: line-through;
+}
+
+.small {
+padding: 8px;
+}
 
 /* header footer starts here*/
 
@@ -280,28 +360,36 @@ header {
     top: 0px;
     text-align: center;
     background-color: lightseagreen;
+    color: rgb(247, 241, 162);
     width: 100%;
     margin: auto;
     height: 250px;
 }
 
-#title{
-    color:black;
+#title {
+    color: black;
     font-family: "Righteous";
     font-size: 70px;
 }
 
-#title-shadow{
+#title-shadow {
     font-family: "Righteous";
     font-size: 70px;
     position: relative;
-    top: -140px; 
+    top: -140px;
 }
 
-#subtitle{
+#subtitle {
     font-size: 30px;
     position: relative;
     top: -150px;
+}
+
+.random-quotes {
+    color: black;
+    margin: auto;
+    text-align: center;
+    position: fixed;
 }
 
 footer {
@@ -309,6 +397,7 @@ footer {
     bottom: 0px;
     text-align: center;
     background-color: lightseagreen;
+    color: rgb(247, 241, 162);
     width: 100%;
     margin: auto;
     font-size: 20px;

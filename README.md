@@ -19,4 +19,4 @@
 
 
 Created as a major project for internship under Verzeo.
-Go to https://htmlpreview.github.io/?https://github.com/HDhyan0912/ToDoListVerzeo/blob/main/main.html to preview the website.
+Go to [here](https://htmlpreview.github.io/?https://github.com/HDhyan0912/ToDoListVerzeo/blob/main/main.html) to preview the website.

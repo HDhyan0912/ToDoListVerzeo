@@ -5,52 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css -->
     <link rel="stylesheet" href="main.css">
-    <!-- css -->
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarina&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-
-    <!-- fonts -->
-
-    <!-- title icon -->
     <link rel="shortcut icon" href="pencil.png" type="image/x-icon">
-    <!-- title icon -->
-
-    <!-- js -->
     <script src="main.js" defer></script>
-    <!-- js -->
-
     <title>To-Dos</title>
 </head>
 
-<body class="common-color">
+<body>
+
+    <!-- header -->
     <header>
         <h1 id="title">To-Do List</h1>
         <h1 id="title-shadow">To-Do List</h1>
         <h2 id="subtitle">Verzeo Web Development Project</h2>
     </header>
 
-    <button class="material-icons add-btn common-color" id="add-btn" onclick="togglePopup()">add</button>
-    <button class="material-icons list-btn common-color" id="list-btn" onclick="togglePopup1()">list</button>
-
-
+    <!-- buttons -->
+    <div class="buttons">
+        <button class="material-icons add-btn common-color" id="add-btn" onclick="togglePopup()">add</button>
+        &emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;
+        <button class="material-icons list-btn common-color" id="list-btn" onclick="togglePopup1()">list</button>
+    </div>
 
     <!-- create-task div -->
-
     <div class="popup-container" id="popup-container">
         <div class="popup"></div>
         <div class="create-task" id="create-task">
             <div class="close-btn" onclick="togglePopup()">&times;</div>
-            <h2 class="popup-title">Create New Task</h2>
+            <h2>Create New Task</h2>
             <form class="form" id="form">
                 <input type="text" id="input" class="input" placeholder="Enter Task" autocomplete="off" required />
                 <h4 class="priority-text">Select Task Priority</h4>
@@ -59,43 +49,49 @@
                     <option value="mid">Medium</option>
                     <option value="low">Low</option>
                 </select><br>
-                <input type="submit" value="Save Task" class="save-task" onclick="togglePopup()" />
+                <input type="submit" value="Save Task" class="save-task" />
             </form>
         </div>
     </div>
 
-    <!-- create-task div ends -->
-
-
     <!-- view-task div -->
-
-    <!-- do uncomment the below lines and see the output -->
-
-    <!-- <div class="view-tasks" >
-        <h2 style="color: black; font-size: 35px; position: relative;">My Tasks</h2>
-        <div class="high common-box">
-            <h2>HIGH</h2>
+    <div class="task-container" id="task-container">
+        <div class="task"></div>
+        <div class="tasks-list">
+            <div class="task-close-btn" onclick="togglePopup1()">&times;</div>
+            <h1>Tasks List</h1>
+            <div class="view-tasks" id="view-tasks">
+                <div class="high">
+                    <h2>HIGH</h2>
+                    <ul class="tasks-high" id="tasks-high"></ul>
+                </div>
+                <div class="mid">
+                    <h2>MEDIUM</h2>
+                    <ul class="tasks-mid" id="tasks-mid"></ul>
+                </div>
+                <div class="low">
+                    <h2>LOW</h2>
+                    <ul class="tasks-low" id="tasks-low"></ul>
+                </div>
+            </div>
+            <!-- instructions -->
+            <div class="small">
+                <small>
+                    Left-click to toggle complete.&emsp13;
+                    Right-click to remove task.&emsp13;
+                    Refresh to unmark all tasks.&emsp13;
+                </small>
+            </div>
         </div>
-        <div class="mid common-box">
-            <h2>MEDIUM</h2>
-        </div>
-        <div class="low common-box">
-            <h2>LOW</h2>
-        </div>
-    </div> -->
-
-
-    <!-- view-task div ends -->
+    </div>
 
     <!-- random-quotes div -->
-
     <div class="random-quotes">
         <h1 id="quote">"Make Notes, Not War"</h1>
         <h2 id="author">Sun Tzu, Art of War</h2>
     </div>
 
-    <!-- random-quotes div ends -->
-
+    <!-- footer -->
     <footer>
         <h2>Made with <heart class="heart">♥</heart>
         </h2>
