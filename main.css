@@ -21,6 +21,7 @@ body {
     justify-content: center;
     position: fixed;
     bottom: 110px;
+    
 }
 
 .add-btn {
@@ -38,10 +39,15 @@ body {
     transition: background 0.25s;
     outline: none;
     border: none;
+    opacity: 75%;
 }
 
 .add-btn:active {
     background-color: rgb(13, 116, 110);
+}
+
+.add-btn:hover{
+    opacity: 100%;
 }
 
 .list-btn {
@@ -59,10 +65,15 @@ body {
     transition: background 0.25s;
     outline: none;
     border: none;
+    opacity: 75%;
 }
 
 .list-btn:active {
     background-color: rgb(13, 116, 110);
+}
+
+.list-btn:hover{
+    opacity: 100%;
 }
 
 /* task creator pop up begins */
@@ -199,7 +210,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     background-color: lightseagreen;
-    width: 1190px;
+    width: 400px;
     height: fit-content;
     z-index: 2;
     align-items: center;
@@ -222,8 +233,9 @@ body {
 
 .view-tasks {
     width: 90%;
-    display: grid;
-    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
 }
@@ -368,12 +380,12 @@ header {
 
 #title {
     color: black;
-    font-family: "Righteous";
+    font-family: "Sarina";
     font-size: 70px;
 }
 
 #title-shadow {
-    font-family: "Righteous";
+    font-family: "Sarina";
     font-size: 70px;
     position: relative;
     top: -140px;
@@ -389,7 +401,7 @@ header {
     color: black;
     margin: auto;
     text-align: center;
-    position: fixed;
+    position: relative;
 }
 
 footer {
