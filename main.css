@@ -24,6 +24,12 @@ body {
     
 }
 
+.center-buttons{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
 .add-btn {
     width: 80px;
     height: 80px;
